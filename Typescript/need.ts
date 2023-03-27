@@ -14,7 +14,7 @@ a = "anoop"
 
 // another way of having types to the variables
 
-let name : string;
+let name : string
 
 // Here only name variable will have string data type 
 
