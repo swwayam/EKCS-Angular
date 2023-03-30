@@ -73,6 +73,26 @@ console.log(newValues1);
 
 
 // Given an array of values [1,22,22,22,22,22,1,23,43,2,4,2]
+
 // using map method multiply all the element with 5
+const val = [1,22,22,22,22,22,1,23,43,2,4,2]
+
+const multiply = val.map(number => number * 5)
+
+console.log(multiply);
+
 // using map method count the number of times 1 and 2 are repeated
+let count = 0
+
+val.map(number => {
+    if (number == 1 || number == 2) {
+        count++;
+    }
+})
+
+console.log(count);
+
 // using filter method remove all the 2's from the array.
+const without2 = val.filter(number => number !== 2)
+
+console.log(without2);
