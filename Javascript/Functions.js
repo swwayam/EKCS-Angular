@@ -96,3 +96,6 @@ console.log(count);
 const without2 = val.filter(number => number !== 2)
 
 console.log(without2);
+
+
+console.log("Hi naushad");
