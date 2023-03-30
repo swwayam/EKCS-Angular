@@ -8,6 +8,12 @@
    // return sum;
   //}
   //console.log(sumArr([1,2,53,2,53,23,5,3]));  
-  let valuees=[1,22,22,22,22,22,1,23,43,2,4,2]
+  let values=[1,22,22,22,22,22,1,23,43,2,4,2]
 
-  const newValues =
+  const newValues = values.map(function(number){
+    if (number !== 5){
+        return number
+    }
+  })
+
+  console.log(newValues);
