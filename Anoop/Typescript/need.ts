@@ -1,3 +1,6 @@
+import { Ekcsempdetails } from "./interface";
+
+
 class Student{
     name: string;
     school: string;
@@ -20,7 +23,31 @@ class Student{
     }
     
 }
-  const rollno = new Student ("xyz", "MDS", 12, "maths")
+
+const rollno = new Student ("xyz", "MDS", 12, "maths")
   console.log (rollno.data());
+
+
+
+
+//Interface here blood group is a optional field
+
+const emp : Ekcsempdetails ={
+    Empname: "Someone",    
+    Empid: 1045,
+    Empnumber: 123456789,   
+}
+
+
+
+
+  
     
+
+
+
+  
+
+
+
 export {}
