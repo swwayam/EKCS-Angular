@@ -1,3 +1,5 @@
+import { User } from "./interface";
+
 // Main topics 
 
 // 1. Data Types - 
@@ -81,6 +83,13 @@ console.log(emp1.login());
 
 //     }
 // ]
+
+
+const user : User ={
+    name: "swayam",
+    id: 1,
+    email: "2@gmail.com"
+}
 
 
 export {}
