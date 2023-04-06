@@ -91,5 +91,27 @@ const user : User ={
     email: "2@gmail.com"
 }
 
+class Animals{
+    noOfLegs: number;
+    name: string;
+    isVeg: boolean;
+    constructor(noOfLegs, name, isVeg){
+        this.noOfLegs = noOfLegs;
+        this.name = name;
+        this.isVeg = isVeg;
+    }
+}
+
+class Dog extends Animals{
+    isPet: boolean;
+    constructor( noOfLegs, name, isVeg, isPet){
+        super(noOfLegs, name, isVeg)
+        this.isPet = isPet;
+    }
+}
+
+const animal = new Animals(4, "xyz", true);
+const dog = new Dog(4, "xyz", true, true);
+
 
 export {}
