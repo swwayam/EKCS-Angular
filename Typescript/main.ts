@@ -1,3 +1,5 @@
+import { User } from "./interface";
+
 // Main topics 
 
 // 1. Data Types - 
@@ -81,6 +83,35 @@ console.log(emp1.login());
 
 //     }
 // ]
+
+
+const user : User ={
+    name: "swayam",
+    id: 1,
+    email: "2@gmail.com"
+}
+
+class Animals{
+    noOfLegs: number;
+    name: string;
+    isVeg: boolean;
+    constructor(noOfLegs, name, isVeg){
+        this.noOfLegs = noOfLegs;
+        this.name = name;
+        this.isVeg = isVeg;
+    }
+}
+
+class Dog extends Animals{
+    isPet: boolean;
+    constructor( noOfLegs, name, isVeg, isPet){
+        super(noOfLegs, name, isVeg)
+        this.isPet = isPet;
+    }
+}
+
+const animal = new Animals(4, "xyz", true);
+const dog = new Dog(4, "xyz", true, true);
 
 
 export {}
