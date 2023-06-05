@@ -1,0 +1,30 @@
+<!--Form To Be Displayed : Once Value entered not to display form -->
+<form *ngIf="displayForm">
+    <input type="text" placeholder="name" #name>
+    <br>
+    <input type="number" placeholder="age" #age>
+    <br>
+    <button (click)="login(name.value, age.value)">Login</button>
+    <br>
+</form>
+
+
+
+<!--Youtube Kids Section If Age < 13 -->
+<div *ngIf="displayYTKids">
+    <h1>Hi {{userName}}</h1>
+    <h3>Welcome To Youtube Kids</h3>
+</div>
+
+
+<!--Youtube Section If Age > 13 -->
+<div *ngIf="displayYT">
+    <h1>Hi {{userName}}</h1>
+    <h3>Welcome To Youtube </h3>
+</div>
+
+
+<!--Error Page If Age Is Not Passed Or Invaild Age Is Passed-->
+<div *ngIf="displayError">
+    <h1>Error : Wrong Page</h1>
+</div>
