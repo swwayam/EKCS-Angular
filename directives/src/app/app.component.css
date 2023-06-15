@@ -1,0 +1,15 @@
+.cards1{
+    width: 600px;
+    margin: 20px auto;
+}
+
+.card{
+    margin: 20px;
+}
+
+.txt1{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

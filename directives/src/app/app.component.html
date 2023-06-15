@@ -1,1 +1,50 @@
-<app-ng-if></app-ng-if>
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">Directives</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <button *ngIf="!btn"  type="button" (click)="showHome()" class="btn btn-light">back</button>
+
+  <div class="txt1" *ngIf="btn">
+    <button (click)="displayEmpForm()" type="button" class="btn btn-light">Add New Employee</button>
+  <button (click)="displayEmp()" type="button" class="btn btn-light">Display Current Employee</button>
+  </div>
+  
+
+  <div class="cards1" *ngFor="let user of userData">
+    <div class="card" style="width: 18rem;" *ngIf="display">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{user.name}}</h5>
+        <p class="card-text">{{user.desc}}</p>
+        <a href="#" class="btn btn-primary">Check Profile</a>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+  <form *ngIf="addNew" style="width: 600px; margin: 0 auto;">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Job Title</label>
+      <input type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Image</label>
+      <input type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  

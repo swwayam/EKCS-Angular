@@ -1,5 +1,5 @@
 <!--Form To Be Displayed : Once Value entered not to display form -->
-<form *ngIf="displayForm">
+<form *ngIf="displayForm; else elsePart">
     <input type="text" placeholder="name" #name>
     <br>
     <input type="number" placeholder="age" #age>
@@ -9,12 +9,18 @@
 </form>
 
 
+<ng-template #elsePart>
+    <h1>This is else part</h1>
+</ng-template>
+
+
 
 <!--Youtube Kids Section If Age < 13 -->
 <div *ngIf="displayYTKids">
     <h1>Hi {{userName}}</h1>
     <h3>Welcome To Youtube Kids</h3>
 </div>
+
 
 
 <!--Youtube Section If Age > 13 -->
@@ -28,3 +34,7 @@
 <div *ngIf="displayError">
     <h1>Error : Wrong Page</h1>
 </div>
+
+
+
+

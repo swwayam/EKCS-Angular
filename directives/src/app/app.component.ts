@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {data} from './data'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'directives';
+  userData = data;
+  addNew = false;
+  display = false;
+  btn = true;
+
+  displayEmp(){
+    this.btn = false;
+    this.display = true
+  }
+  
+  displayEmpForm(){
+    this.btn = false;
+    this.addNew = true
+  }
+
+  showHome(){
+    this.btn = true;
+    this.display = false;
+    this.addNew = false;
+  }
 }

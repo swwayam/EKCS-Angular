@@ -1,0 +1,26 @@
+<h1>page {{page}}</h1>
+
+<div [ngSwitch]="page">
+
+<div *ngSwitchCase="1">
+    <h1>This is home page</h1>
+    <h3>Welcome to home page</h3>
+</div>
+
+<div *ngSwitchCase="2">
+    <h1>This is About page</h1>
+    <h3>Welcome to About page</h3>
+</div>
+
+<div *ngSwitchCase="3">
+    <h1>This is contact page</h1>
+    <h3>Welcome to contact page</h3>
+</div>
+
+<div *ngSwitchDefault>
+    <h1>This is Error page</h1>
+    <h3>Welcome to Error page</h3>
+</div>
+</div>
+<button (click)="add()">next page</button>
+<button (click)="sub()">previous page</button>
